@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | News homepage</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=DM+Serif+Display&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter:wght@400;700;800&family=Karla:wght@400;700&family=Lexend+Deca&family=Raleway:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- header
+  ==============
+ -->
+ <header>
+  <img src="assets/images/logo.svg" alt="">
+  <nav>
+      <ul class="nav__list">
+            <li class="list"><a href="#"> Home</a></li>
+            <li class="list"><a href="#"> New</a></li>
+            <li class="list"><a href="#"> Popular</a></li>
+            <li class="list"><a href="#">Trending</a></li>
+            <li class="list"><a href="#">  Categories</a></li>
+      </ul>
+  </nav>
+
+  <img class="menu" src="assets/images/icon-menu.svg" alt="">
+ </header>
+ 
+ <!-- main
+================= -->
+
+<main>
+     
+   <!-- === 01 === -->
+
+  <picture>
+    <source media="(min-width:710px)" srcset="assets/images/image-web-3-desktop.jpg">
+    <source srcset="assets/images/image-web-3-mobile.jpg">
+    <img class="pic__img"
+    src="assets/images/image-web-3-desktop.jpg" alt="">
+  </picture>
+
+    <!-- === 02 === -->
+     
+    <div class="home-hero">
+      <h1 class="black__hd bright__hd">  The Bright Future of Web 3.0?</h1>
+      <div class="home-child">
+      <p class="home__para01">  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+  But is it really fulfilling its promise?</p>
+      <button class="button">
+  Read more</button>
+</div>
+    </div>
+    
+     <!-- === 03 === -->
+
+     <div class="home-new">
+       <h2 class="orange__hd"> New</h2>
+
+       <h3 class="white__hd">  Hydrogen VS Electric Cars</h3>
+       <p class="new__para">  Will hydrogen-fueled cars ever catch up to EVs?</p>
+       <hr>
+
+       <h3 class="white__hd">
+  The Downsides of AI Artistry</h3>
+       <p class="new__para">
+  What are the possible adverse effects of on-demand AI image generation?</p>
+       <hr>
+
+       <h3 class="white__hd">  Is VC Funding Drying Up?</h3>
+       <p class="new__para"> Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+    
+       
+    </div>
+
+  <!-- === 04 === -->
+
+    <div class="home-retro">
+
+          <img  class="retro__img"
+          src="assets/images/image-retro-pcs.jpg" alt="">
+
+          <div class="retro-para">
+
+                <span class="count"> 01</span>
+                <h4 class="black__hd retro__hd">Reviving Retro PCs</h4>
+                <p>    What happens when old PCs are given modern upgrades?</p>
+            
+          </div>
+
+    </div>
+   
+  <!-- === 05 === -->
+
+    <div class="home-retro">
+
+      <img  class="retro__img" src="assets/images/image-top-laptops.jpg" alt="">
+
+      <div class="retro-para">
+
+            <span class="count">02</span>
+            <h4 class="black__hd retro__hd">
+Top 10 Laptops of 2022</h4>
+            <p>Our best picks for various needs and budgets.
+</p>
+        
+      </div>
+
+</div>
+
+
+<!-- === 06 === -->
+
+<div class="home-retro">
+
+  <img  class="retro__img" src="assets/images/image-gaming-growth.jpg" alt="">
+
+  <div class="retro-para">
+
+        <span class="count">  03</span>
+        <h4 class="black__hd retro__hd"> The Growth of Gaming</h4>
+        <p> 
+  How the pandemic has sparked fresh opportunities.</p>
+    
+  </div>
+
+</div>
+
+</main>
+    
+<!-- javascript 
+================
+ -->
+
+<script>
+  let fact=true;
+  let menu=document.querySelector('.menu');
+
+    
+  menu.addEventListener('click',()=>{
+
+  document.querySelector('.nav__list').classList.toggle("dropdown")
+
+
+ 
+if(fact)
+{
+  menu.src="assets/images/icon-menu-close.svg"
+  fact=false;
+}
+else
+{
+  menu.src ="assets/images/icon-menu.svg"
+  fact=true
+}
+
+  })
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

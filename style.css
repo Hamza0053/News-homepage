@@ -1,0 +1,290 @@
+:root{
+    --soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+
+    --Off-white: hsl(36, 100%, 99%);
+
+    --clr-blue-100: hsl(233, 8%, 79%);
+    --clr-blue-200:hsl(236, 13%, 42%);
+    --clr-blue-300:hsl(240, 100%, 5%);
+
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+background-color: aqua;
+width: 100vw;
+    min-height: 100vh;
+   overflow-x: hidden;
+}
+
+
+
+
+html{
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+
+}
+
+h1,h2,h3,h4,p{
+    padding: 0;
+    margin: 0;
+}
+
+img,svg{
+    display: block;
+    max-width: 100%;
+}
+
+/* typography
+=================== */
+p , .count , a{
+    color:var(--clr-blue-200);
+}
+
+.home__para{
+line-height: 1.725em;
+margin-block: 1.5em;
+}
+
+.home-new p{
+    color: var(--Off-white);
+    opacity: .7;
+    line-height: 1.725em;
+}
+
+.black__hd{
+    color:var(--clr-blue-300);
+}
+
+.white__hd{
+color: var(--Off-white);
+}
+
+.bright__hd{
+    font-size: 2.75rem;
+    font-weight: 900;
+    line-height: 1.025em;
+}
+
+.orange__hd{
+    color: var(--soft-orange);
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: .9em;
+}
+
+.count{
+    font-size: 2rem;
+    font-weight: 700;
+    opacity: .4;
+}
+/* button
+============== */
+.button{
+    text-transform: uppercase;
+    border: none;
+    background-color: var(--Soft-red);
+    color: var(--Off-white);
+    padding: 1em 2.25em;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+}
+
+.retro__hd{
+    font-size:1.25rem;
+    font-weight: 900;
+}
+
+.retro-para p{
+    line-height: 1.65em;
+    font-weight: 400;
+}
+
+/* header
+============= */
+main{
+    padding: 0em 1.25em 6em 1.25em;
+    display: grid;
+    grid-gap: 2em;
+}
+
+@media (min-width:900px) {
+  main{
+    grid-template-areas:
+    "picture picture new"
+    "bright bright new"
+    "img1 img2 img3"
+    ;
+
+  }
+  picture{
+    grid-area:picture ;
+
+  }
+  .home-new{
+    grid-area: new;
+  }
+  .home-hero{
+    grid-area: bright;
+}
+}
+
+
+@media (min-width:1025px) {
+    main{
+        padding: 0em 3em 3em 3em;
+    }
+    .home-hero{
+        display: flex;
+        gap: 2em;
+    }
+  .home-hero div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: self-start;
+  }
+  .button{
+    margin-top: 2em;
+  }
+}
+
+
+
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em 2em;
+    position: relative;
+}
+
+
+li{
+    list-style: none;
+}
+
+.list{
+    display: inline-block;
+}
+
+.list + .list{
+    margin-left: 2em;
+}
+a{
+    text-decoration: none;
+    font-weight: 700;
+    opacity: .7;
+}
+
+.menu{
+    display: none;
+  
+}
+
+@media (max-width:700px) {
+    .nav__list{
+        padding-right: 12em;
+        display: grid;
+        position: absolute;
+        justify-content: start;
+        align-content: center;
+        top: 0;
+        right: 0;
+        background-color: var(--Off-white);
+        /* width:min(20rem,80%); */
+        min-height: 100vh;
+        transform: translateX(20rem); 
+        transition: transform ease-in-out 400ms;
+   
+    }
+
+   .dropdown{
+    transform: translateX(0rem); 
+   }
+
+    .list + .list{
+        margin-left: 0;
+        margin-top: 2em;
+    }
+
+    .menu{
+        display: block;
+        position: relative;
+    }
+}
+
+/* bright future start here
+==============================
+ */
+
+.home-new{
+    background-color: var(--clr-blue-300);
+    padding: 1.725em 1.5em;
+    color: var(--Off-white);
+}
+
+
+
+.home-new hr{
+    margin-block: 2em;
+    border: none;
+    background-color: var(--Off-white);
+    height: 1px;
+    opacity: .5;
+}
+
+.white__hd{
+    margin-bottom: .625em;
+}
+
+/* rotro start here
+======================
+ */
+
+ .home-retro{
+    display: flex;
+    gap: 1.25em;
+ }
+
+ .retro__img{
+    width: 100px;
+    height: 130px;
+ }
+
+ .retro-para{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .125em;
+    font-weight: 400;
+  }
+
+  @media (max-width:1024px) {
+    .home-hero div p{
+        margin-block: 1.725em;
+        line-height: 1.725em;
+    }
+  }
+
+  .home-hero div p{
+   line-height: 1.725em;
+}
+
+main{
+    max-width: 1440px;
+    margin-inline: auto;
+}
