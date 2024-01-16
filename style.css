@@ -19,7 +19,6 @@
 body{
     padding: 0;
     margin: 0;
-background-color: aqua;
 width: 100vw;
     min-height: 100vh;
    overflow-x: hidden;
@@ -196,24 +195,27 @@ a{
 }
 
 @media (max-width:700px) {
+   
     .nav__list{
         padding-right: 12em;
-        display: grid;
         position: absolute;
         justify-content: start;
         align-content: center;
         top: 0;
         right: 0;
         background-color: var(--Off-white);
-        /* width:min(20rem,80%); */
+        width:min(20rem,80%);
         min-height: 100vh;
-        transform: translateX(20rem); 
-        transition: transform ease-in-out 400ms;
-   
+        transform: translateX(20em); 
+        display: none;
+        
     }
 
    .dropdown{
-    transform: translateX(0rem); 
+    display: grid;
+    transition: transform ease-in-out 4s ;
+   
+    transform:translateX(0em); 
    }
 
     .list + .list{
